@@ -5,7 +5,7 @@ import helmet from 'helmet';
 import pino from 'pino-http';
 
 const app = express();
-const PORT = process.env.PORT ?? 3000;
+const PORT = process.env.PORT ?? 3030;
 
 // Middleware
 app.use(express.json());
