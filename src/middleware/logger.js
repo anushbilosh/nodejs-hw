@@ -1,4 +1,6 @@
-export const loggerOptions = {
+import pino from 'pino-http';
+
+export const logger = pino({
   level: 'info',
   transport: {
     target: 'pino-pretty',
@@ -11,4 +13,4 @@ export const loggerOptions = {
       hideObject: true,
     },
   },
-};
+});
