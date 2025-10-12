@@ -7,7 +7,6 @@ export const errorHandler = (err, req, res, next) => {
   }
 
   res.status(500).json({
-    message: 'Simulated server error',
-    error: err.message,
+    message: err.message,
   });
 };
