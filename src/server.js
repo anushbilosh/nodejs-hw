@@ -10,6 +10,7 @@ import authRoutes from './routes/authRoutes.js';
 import { logger } from './middleware/logger.js';
 import { errors } from 'celebrate';
 import cookieParser from 'cookie-parser';
+import userRoutes from './routes/userRoutes.js';
 
 const app = express();
 const PORT = process.env.PORT ?? 3030;
@@ -24,6 +25,7 @@ app.use(helmet());
 // Routes
 app.use(authRoutes);
 app.use(notesRoutes);
+app.use(userRoutes);
 
 // Middleware 404 (після всіх маршрутів)
 app.use(notFoundHandler);
